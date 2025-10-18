@@ -27,6 +27,7 @@ class Bag:
         new_rack = ''.join(np.random.choice(list(self.alphabet),
                                             p=self.repartition / np.sum(self.repartition),
                                             size=LETTERS_PER_RACK - len(leave))) + leave
+        print(new_rack)
         if self.discard_rack(new_rack):
             return self.draw("")
         else:
@@ -35,4 +36,4 @@ class Bag:
 
 bag = Bag()
 
-print(bag.draw(""))
+print(bag.draw("EIU"))
